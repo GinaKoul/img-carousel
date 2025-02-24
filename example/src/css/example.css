@@ -1,0 +1,22 @@
+.img-carousel {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.img-slide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.img-slide.active {
+  opacity: 1;
+}
+
+.img-slide img {
+  width: 100%;
+}
