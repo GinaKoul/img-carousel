@@ -1,30 +1,9 @@
-import "./css/example.css";
-
-const ImageCarousel = (function (doc) {
-  let ImgCarousels;
-
-  function initCarousel(carousel) {
-    const carouselSlides = carousel.childNodes;
-    for (const node of carouselSlides) {
-      console.log(node);
-    }
-    // carouselSlides.forEach((slide, index) => {
-    //   console.log(slide);
-    //   slide.setAttribute("data-id", index);
-    //   if (index === 0) slide.classList.add("active");
-    // });
-  }
-
-  function initCarousels() {
-    ImgCarousels = doc.querySelectorAll(".img-carousel");
-    ImgCarousels.forEach((carousel) => {
-      initCarousel(carousel);
-    });
-  }
-  return {
-    init: initCarousels,
-  };
-})(document);
+import { SimpleCarousel } from "./simple-carousel.js";
+import carouselImage1 from "./images/appetizers.jpg?sizes[]=500,sizes[]=1920";
+import carouselImage2 from "./images/desserts.jpg?sizes[]=500,sizes[]=1920";
+import carouselImage3 from "./images/pasta.jpg?sizes[]=500,sizes[]=1920";
+import carouselImage4 from "./images/pizza.jpg?sizes[]=500,sizes[]=1920";
+import carouselImage5 from "./images/salad.jpg?sizes[]=500,sizes[]=1920";
 
 (function (doc) {
   let carousel;
@@ -40,36 +19,23 @@ const ImageCarousel = (function (doc) {
 
   function createSlide(images) {
     let slide = doc.createElement("div");
-    slide.classList.add("img-slide");
+    slide.classList.add("simple-slide");
     slide.append(createImage(images));
     carousel.append(slide);
   }
 
   function addImages() {
-    import(`./images/appetizers.jpg?sizes[]=500,sizes[]=1920`).then(
-      (images) => {
-        createSlide(images);
-      },
-    );
-
-    import(`./images/desserts.jpg?sizes[]=500,sizes[]=1920`).then((images) => {
-      createSlide(images);
-    });
-    import(`./images/pasta.jpg?sizes[]=500,sizes[]=1920`).then((images) => {
-      createSlide(images);
-    });
-    import(`./images/pizza.jpg?sizes[]=500,sizes[]=1920`).then((images) => {
-      createSlide(images);
-    });
-    import(`./images/salad.jpg?sizes[]=500,sizes[]=1920`).then((images) => {
-      createSlide(images);
-    });
+    createSlide(carouselImage1);
+    createSlide(carouselImage2);
+    createSlide(carouselImage3);
+    createSlide(carouselImage4);
+    createSlide(carouselImage5);
   }
 
-  function init() {
-    carousel = doc.querySelector(".img-carousel");
+  async function init() {
+    carousel = doc.querySelector(".simple-carousel");
     addImages();
-    ImageCarousel.init();
+    SimpleCarousel.init();
   }
 
   if (doc.readyState === "loading") {

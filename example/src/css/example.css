@@ -1,10 +1,11 @@
-.img-carousel {
+/* Default */
+.simple-carousel {
   max-width: 100%;
   width: 100%;
   position: relative;
 }
 
-.img-slide {
+.simple-slide {
   position: absolute;
   top: 0;
   right: 0;
@@ -13,10 +14,81 @@
   opacity: 0;
 }
 
-.img-slide.active {
+.simple-slide.active {
   opacity: 1;
 }
 
-.img-slide img {
+.simple-slide > * {
   width: 100%;
+}
+
+/* Make carousel items fit the width and height of the carousel */
+.simple-carousel.fit {
+  width: var(--simple-carousel-width, 800px);
+  height: var(--simple-carousel-height, 500px);
+}
+.simple-carousel.fit .simple-slide > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Carousel arrows */
+.simple-arrow {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  width: 48px;
+  height: 48px;
+  background-color: var(--simple-carousel-arrow-bg, #fff);
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  pointer-events: all;
+}
+
+.simple-arrow:hover,
+.simple-arrow:focus {
+  background-color: var(--simple-carousel-arrow-hover-bg, #37b1a0);
+}
+
+.simple-arrow.disabled {
+  pointer-events: none;
+}
+
+.simple-arrow.disabled,
+.simple-arrow.disabled:hover,
+.simple-arrow.disabled:focus {
+  background-color: var(--simple-carousel-arrow-disabled-bg, gray);
+}
+
+.simple-arrow:after {
+  content: "";
+  display: inline-block;
+  padding: 5px;
+  border-width: 0 3px 3px 0;
+  border-style: solid;
+  border-color: var(--simple-carousel-arrow-color, #333);
+}
+
+.simple-arrow[data-direction="left"] {
+  left: 8px;
+}
+
+.simple-arrow[data-direction="left"]::after {
+  translate: 2.5px 2.5px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.simple-arrow[data-direction="right"] {
+  right: 8px;
+}
+
+.simple-arrow[data-direction="right"]::after {
+  translate: -2.5px 2.5px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
