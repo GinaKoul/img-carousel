@@ -1,4 +1,4 @@
-import "./css/simple-carousel.css";
+import "../css/simple-carousel.css";
 import { documentMock } from "./document-mock";
 
 export const SimpleCarousel = (function (doc) {
@@ -216,6 +216,11 @@ export const SimpleCarousel = (function (doc) {
     // Get all slides of carousel
     const carouselSlides = currentCarousel.querySelectorAll(".simple-slide");
 
+    if (carouselSlides.length <= 1) {
+      carouselSlides[0]?.classList.add("active");
+      return;
+    }
+
     // Create container to hold all the navigation dots
     const dotsContainer = doc.createElement("nav");
     dotsContainer.classList.add("simple-dots");
@@ -252,5 +257,7 @@ export const SimpleCarousel = (function (doc) {
     });
   }
 
-  initCarousels();
+  return {
+    init: initCarousels,
+  };
 })(document || documentMock);

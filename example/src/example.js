@@ -1,4 +1,5 @@
-import { SimpleCarousel } from "./simple-carousel.js";
+import "../node_modules/simple-carousel/dist/simple-carousel.css";
+import { SimpleCarousel } from "../node_modules/simple-carousel/dist/simple-carousel.js";
 import carouselImage1 from "./images/appetizers.jpg?sizes[]=500,sizes[]=1920";
 import carouselImage2 from "./images/desserts.jpg?sizes[]=500,sizes[]=1920";
 import carouselImage3 from "./images/pasta.jpg?sizes[]=500,sizes[]=1920";
@@ -24,17 +25,30 @@ import carouselImage5 from "./images/salad.jpg?sizes[]=500,sizes[]=1920";
     carousel.append(slide);
   }
 
-  function addImages() {
+  function addImages1() {
     createSlide(carouselImage1);
     createSlide(carouselImage2);
+  }
+
+  function addImages2() {
+    createSlide(carouselImage2);
+    createSlide(carouselImage3);
+    createSlide(carouselImage4);
+  }
+
+  function addImages3() {
     createSlide(carouselImage3);
     createSlide(carouselImage4);
     createSlide(carouselImage5);
   }
 
   async function init() {
-    carousel = doc.querySelector(".simple-carousel");
-    addImages();
+    carousel = doc.querySelector("#simple1.simple-carousel");
+    addImages1();
+    carousel = doc.querySelector("#simple2.simple-carousel");
+    addImages2();
+    carousel = doc.querySelector("#simple3.simple-carousel");
+    addImages3();
     SimpleCarousel.init();
   }
 

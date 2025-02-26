@@ -1,20 +1,20 @@
 {
   "name": "simple-carousel",
   "description": "Simple carousel with navigation and autoplay",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "author": "ginakoul",
   "module": "./dist/simple-carousel.js",
   "browser": "./dist/simple-carousel.js",
   "main": "./dist/simple-carousel.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GinaKoul/menu-drop"
+    "url": "git+https://github.com/GinaKoul/simple-carousel"
   },
   "files": [
     "dist"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/GinaKoul/menu-drop#readme",
+  "homepage": "https://github.com/GinaKoul/simple-carousel#readme",
   "devDependencies": {
     "@eslint/js": "^9.20.0",
     "css-loader": "^7.1.2",
