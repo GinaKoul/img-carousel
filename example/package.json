@@ -39,6 +39,7 @@
     "npm": ">=10.9.2"
   },
   "dependencies": {
+    "@ginakoul/simple-carousel": "^0.0.1",
     "menu-drop": "^0.0.3"
   }
 }

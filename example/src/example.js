@@ -1,5 +1,5 @@
-import "../node_modules/simple-carousel/dist/simple-carousel.css";
-import { SimpleCarousel } from "../node_modules/simple-carousel/dist/simple-carousel.js";
+import "@ginakoul/simple-carousel/dist/simple-carousel.css";
+import { SimpleCarousel } from "@ginakoul/simple-carousel/dist/simple-carousel.js";
 import carouselImage1 from "./images/appetizers.jpg?sizes[]=500,sizes[]=1920";
 import carouselImage2 from "./images/desserts.jpg?sizes[]=500,sizes[]=1920";
 import carouselImage3 from "./images/pasta.jpg?sizes[]=500,sizes[]=1920";

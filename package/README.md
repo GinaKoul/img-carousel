@@ -3,7 +3,7 @@
 ## Package installation
 
 ```bash
-npm i simple-carousel
+npm i @ginakoul/simple-carousel
 ```
 
 ## Import menu-drop to project
@@ -11,13 +11,13 @@ npm i simple-carousel
 ### Import Css
 
 ```bash
-import "simple-carousel/dist/simple-carousel.css";
+import "@ginakoul/simple-carousel/dist/simple-carousel.css";
 ```
 
 ### Import Js
 
 ```bash
-import { SimpleCarousel } from "simple-carousel/dist/simple-carousel.js";
+import { SimpleCarousel } from "@ginakoul/simple-carousel/dist/simple-carousel.js";
 SimpleCarousel.init();
 ```
 
