@@ -1,11 +1,11 @@
 {
-  "name": "menu-drop",
-  "description": "Responsive dropdown menu",
+  "name": "simple-carousel",
+  "description": "Simple carousel with navigation and autoplay",
   "version": "0.0.3",
   "author": "ginakoul",
-  "module": "./dist/menu-drop.js",
-  "browser": "./dist/menu-drop.js",
-  "main": "./dist/menu-drop.js",
+  "module": "./dist/simple-carousel.js",
+  "browser": "./dist/simple-carousel.js",
+  "main": "./dist/simple-carousel.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GinaKoul/menu-drop"

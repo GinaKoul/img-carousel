@@ -1,4 +1,5 @@
-import "./css/example.css";
+import "./css/simple-carousel.css";
+import { documentMock } from "./document-mock";
 
 export const SimpleCarousel = (function (doc) {
   function rotate(currentCarousel, currentSlide, nextSlideId) {
@@ -250,7 +251,6 @@ export const SimpleCarousel = (function (doc) {
       initCarousel(currentCarousel);
     });
   }
-  return {
-    init: initCarousels,
-  };
-})(document);
+
+  initCarousels();
+})(document || documentMock);

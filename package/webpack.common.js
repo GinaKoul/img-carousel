@@ -3,10 +3,10 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
     target: "web",
-    entry: "./src/assets/js/menu-drop.js",
+    entry: "./src/assets/js/simple-carousel.js",
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "menu-drop.css",
+            filename: "simple-carousel.css",
         }),
     ],
     module: {
